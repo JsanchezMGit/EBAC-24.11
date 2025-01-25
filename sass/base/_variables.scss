@@ -1,0 +1,14 @@
+$fontFamlily: "Lexend", Arial, Helvetica, sans-serif;
+$blackColor: #000;
+$grayColor: #444;
+$whiteColor: #fff;
+$blueColor: #22f;
+$yellowColor: #fffb00;
+$previewImageHeight: 295px;
+$previewImageWidth: 210px;
+$imageHeight: calc($previewImageHeight * 2);
+$smallImageHeight: calc($imageHeight * .75);
+$grayColorTransparent: rgba(68, 68, 68, .5);
+$blackColorTransparent: rgba(0, 0, 0, 0.5);
+$textShadow: 1px 1px 2px $blackColor;
+$radiusBase: 0.5rem;

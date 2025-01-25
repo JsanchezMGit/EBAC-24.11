@@ -1,0 +1,58 @@
+header {
+    @include felxContainer($justifyContent:center);
+    background-color: $grayColor;
+    width: 100%;
+    @include smallScreen {
+        @include gridContainer($gap: 10px);
+        & .mainsearch {
+            min-width: 300px;
+        }
+    }
+}
+
+.search-container {
+    @include felxContainer($justifyContent:center);
+}
+
+.mainsearch {
+    border-radius: 2rem;
+    min-width: 30rem;
+    min-height: 2rem;
+    padding: .5rem;
+    font-size: 1rem;
+    font-weight: 800;
+    margin: .5rem 0;
+    text-align: center;
+}
+
+.menu {
+    cursor: pointer;
+    margin-right: 1rem;
+    &-container{
+        margin-right: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include smallScreen {
+            justify-content: center;
+        }
+    }
+}
+
+.logo {
+    cursor: pointer;
+    color: $whiteColor;
+    background-image: url('../img/tvstatic.jpeg');
+    padding: .1rem .5rem;
+    border-radius: 5px;
+    align-content: center;
+    display: flex;
+    align-items: center;
+    span {
+        text-shadow: $textShadow;
+    }
+    img {
+        width: 1.5rem;
+        margin-left: .5rem;
+    }
+}

@@ -1,0 +1,61 @@
+@import "../components/_tvitem";
+@import "../components/_itemdetails";
+
+body {
+    background-color: $blackColor;
+    color: $whiteColor;
+    font-family: $fontFamlily;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+.navmenu {
+    background-color: $grayColor;
+    position: absolute;
+    left: -100%;
+    top: 3rem;
+    color: $whiteColor; 
+    text-align: center;
+    min-width: 100%;
+    transition: left .3s;
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    &-option {
+        list-style-type: none;
+        cursor: pointer;
+        margin: .5rem;
+    }
+    &--shown {
+        left: 0;
+    }
+    @include smallScreen {
+        top: 5.5rem;
+        &--shown {
+            left: 0;
+        }
+    }    
+}
+
+.main-title {
+    width: 100%;
+    text-align: center;
+}
+
+.tv-items {
+    @include gridContainer($columns: repeat(5, 1fr));
+    justify-items: center;
+    @include largeScreen {
+        @include gridContainer($columns: repeat(4, 1fr));
+    }
+    @include mediumScreen {
+        @include gridContainer($columns: repeat(3, 1fr));
+    }
+    @include smallScreen {
+        @include gridContainer();
+    }  
+}

@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sass/core.css">
+    <script src="js/domElements.js" defer></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/functions.js" defer></script>
     <title>¿Que ver en TV?</title>
 </head>
 <body>
-    
+    <header>
+        <section class="menu-container">
+            <img class="menu" src="img/menu.svg" alt="Menu">
+            <div class="logo">
+                <span>¿Que ver en TV?</span>
+                <img src="img/tv.svg" alt="Icono de ¿Que ver en TV?">
+            </div>
+        </section>
+        <section class="search-container">
+            <input class="mainsearch" type="search" name="mainsearch" id="mainsearch" autocomplete="off" placeholder="Buscar ¿Que ver en TV?">
+        </section>
+    </header>
+    <main>
+        <h1 class="main-title">¿Que ver en TV?</h1>
+        <section class="tv-items"></section>        
+        <nav class="navmenu">
+            <ul>
+                <li class="navmenu-option" data-filter="1"><a>Top famosos</a></li>
+                <li class="navmenu-option" data-filter="2"><a>Top ¿Que ver en TV?</a></li>
+                <li class="navmenu-option" data-filter="3"><a>Top peliculas</a></li>
+                <li class="navmenu-option" data-filter="4"><a>Top series</a></li>
+            </ul>  
+        </nav>
+    </main class="tv">
+    <footer></footer>
+    <div class="item-details">
+        <section class="item-details-header">
+            <span class="close-details">X</span>
+            <h2 class="item-details-title">Title</h2>
+        </section>
+        <section class="item-details-body"></section>
+    </div>
 </body>
 </html>

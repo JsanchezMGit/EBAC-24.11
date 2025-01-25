@@ -1,0 +1,28 @@
+@mixin felxContainer($direction:row, $wrap:nowrap, $alignContent: normal, $alignItems: normal, $justifyContent: normal, $justifyItems: normal) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    align-content: $alignContent;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+    justify-items: $justifyItems;
+    box-sizing: border-box;
+}
+
+@mixin gridContainer ($columns: 1fr, $gap: unset) {
+    display: grid;
+    grid-template-columns: $columns;
+    gap: $gap;
+}
+
+@mixin largeScreen {
+    @media screen and (max-width: 1230px) { @content };
+}
+
+@mixin mediumScreen {
+    @media screen and (max-width: 990px) { @content };
+}
+
+@mixin smallScreen {
+    @media screen and (max-width: 750px) { @content };
+}

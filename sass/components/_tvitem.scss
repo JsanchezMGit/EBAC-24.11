@@ -1,0 +1,50 @@
+.tv-item {
+    margin: 1rem;
+    cursor: pointer;
+    border-radius: $radiusBase;
+    background-color: $grayColor;
+    &-image {
+        width: $previewImageWidth;
+        height: $previewImageHeight;
+        border-radius: $radiusBase $radiusBase 0 0;
+    }
+    &-title {
+        max-width: $previewImageWidth;
+        margin: 0 auto;
+        text-align: center;
+    }
+    &-data {
+        @include felxContainer($direction:row, $alignItems: center, $justifyContent: space-evenly);
+    }
+    &-summary {
+        box-sizing: border-box;
+        position: absolute;
+        text-align: center;
+        width: $previewImageWidth;
+        height: 100%;
+        border-radius: $radiusBase;
+        backdrop-filter: blur(.2rem);
+        background-color: $grayColorTransparent;
+        text-align: center;
+        font-size: .8rem;
+        top: -100%;
+        p {
+            margin: .25rem;
+            max-height: 80%;
+            overflow: auto;
+        }
+        ul {
+            @include felxContainer($wrap:wrap, $justifyContent: space-evenly);
+            list-style-type: none;
+            font-weight: 800;
+            padding: 0 .25rem;
+        }
+        &--shown {
+            top: auto;
+        }
+    }
+    &-link {
+        cursor: help;
+        border-radius: $radiusBase;
+    }
+}
