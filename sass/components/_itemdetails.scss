@@ -1,0 +1,51 @@
+.item-details {
+    top: 0;
+    left: -100%;
+    position: fixed;
+    backdrop-filter: blur(.2rem);
+    background-color: $blackColorTransparent;
+    &-header {
+        @include felxContainer($justifyContent: center, $alignItems: center);
+    }
+    &-body {
+        @include felxContainer($alignItems: stretch);
+        article {
+            padding: .5rem;
+        }
+        @include smallScreen {
+            @include felxContainer($direction:column, $alignItems: center);
+        }
+    }
+    &-title {
+        font-size: 2rem;
+        text-align: center;
+        width: 100%;
+        text-shadow: $textShadow;
+    }
+    &-image {
+        padding: .5rem;
+        height: $imageHeight;
+        max-width: 433px;
+        @include smallScreen {
+            height: $smallImageHeight;
+        }        
+    }
+    &-summary {
+        text-align: justify;
+    }
+    &-data {
+        @include felxContainer($direction:column, $alignItems: flex-start);
+        @include smallScreen {
+            @include gridContainer ($columns: repeat(2, 1fr));
+        }
+    }
+    &--shown {
+        left: auto;
+    }
+}
+
+.close-details {
+    cursor: pointer;
+    padding: .5rem;
+    font-size: 2rem;
+}
