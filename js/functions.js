@@ -114,13 +114,14 @@ const getTvSummaryDetails = (tvItemObject) => {
     return tvItemSummaryDetails;
 };
 
-const getTvResults = (query) => {
-    getData(`search/shows?q=${query}`)
-    .then(result => {
+const getTvResults = async (query) => {
+
+    try {
+        const result = await getData(`search/shows?q=${query}`);
         buildTvItems(result);
-    }).catch(error => {
-        console.error('Ocurrio un error en la consulta de la API', error);
-    });
+    } catch (error) {
+        console.error('Ocurrio un error en la consulta de los shows', error);
+    }
 };
 
 const setTvDetailsSize = () => {
